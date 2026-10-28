@@ -1,0 +1,24 @@
+go2rtc:
+  bin: /config/go2rtc
+  log: debug
+  api:
+    listen: :1984
+  streams:
+  
+cameras:
+  dummy_camera:
+    enabled: False
+    ffmpeg:
+      inputs:
+        - path: rtsp://invalid.rtsp.stream/path
+          roles:
+            - detect
+
+mqtt:
+  host: homeassistant.local
+  port: 1883
+  topic_prefix: frigate
+  client_id: frigate
+  user: alex
+  password: Auburn15
+  stats_interval: 60

@@ -1,0 +1,11 @@
+info  2024-01-17 16:30:42: Logging to console and directory: '/config/zigbee2mqtt/log/2024-01-17.16-30-32' filename: log.txt
+info  2024-01-17 16:30:49: Starting Zigbee2MQTT version 1.35.1 (commit #unknown)
+info  2024-01-17 16:30:49: Starting zigbee-herdsman (0.30.0)
+error 2024-01-17 16:31:27: Error while starting zigbee-herdsman
+error 2024-01-17 16:31:27: Failed to start zigbee
+error 2024-01-17 16:31:28: Check https://www.zigbee2mqtt.io/guide/installation/20_zigbee2mqtt-fails-to-start.html for possible solutions
+error 2024-01-17 16:31:28: Exiting...
+error 2024-01-17 16:31:51: Error: Error while opening serialport 'Error: Error Resource temporarily unavailable Cannot lock port'
+    at SerialPort.<anonymous> (/app/node_modules/zigbee-herdsman/src/adapter/z-stack/znp/znp.ts:146:28)
+    at SerialPort._error (/app/node_modules/@serialport/stream/dist/index.js:82:22)
+    at /app/node_modules/@serialport/stream/dist/index.js:118:18

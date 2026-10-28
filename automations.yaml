@@ -1,0 +1,54 @@
+- id: '1744052792572'
+  alias: Hide Rx Stereo UI Menu When Off
+  description: 'Hide the menu in the Rx Stereo UI when the Player is turned off. '
+  triggers:
+  - device_id: f4472eb5d590432db20270ffa534e505
+    domain: media_player
+    entity_id: f80a8e2b0d4400393a499553d3219362
+    type: turned_off
+    trigger: device
+  conditions: []
+  actions:
+  - metadata: {}
+    data: {}
+    target:
+      entity_id: input_boolean.rx_stereo_menu
+    action: input_boolean.turn_off
+  - target:
+      entity_id: input_boolean.rx_stereo_volume
+    data: {}
+    action: input_boolean.turn_off
+  mode: single
+- id: '1744052822250'
+  alias: 'Reset MASS UI Menu List '
+  description: 'Set input_select.rx_stereo_menu_list to "Search" when the UI menu
+    is closed. '
+  triggers:
+  - entity_id:
+    - input_boolean.rx_stereo_menu
+    trigger: state
+  conditions: []
+  actions:
+  - if:
+    - condition: state
+      entity_id: input_boolean.rx_stereo_menu
+      state: 'on'
+    then:
+    - metadata: {}
+      data:
+        option: Search
+      target:
+        entity_id: input_select.rx_stereo_menu_list
+      action: input_select.select_option
+  - if:
+    - condition: state
+      entity_id: input_boolean.rx_stereo_menu
+      state: 'off'
+    then:
+    - metadata: {}
+      data:
+        option: CoverArt
+      target:
+        entity_id: input_select.rx_stereo_menu_list
+      action: input_select.select_option
+  mode: single
