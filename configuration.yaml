@@ -1,6 +1,9 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
+system_log:
+  fire_event: true
+
 # Text to speech
 #tts:
 #  - platform: google_translate
