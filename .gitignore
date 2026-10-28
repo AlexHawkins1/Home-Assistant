@@ -26,6 +26,4 @@ custom_components/hacs/
 .cache/
 .ha_run.lock
 .git_deploy_key*
-.cache/
-.ha_run.lock
 known_devices.yaml
