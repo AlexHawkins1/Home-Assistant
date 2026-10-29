@@ -8,9 +8,6 @@ system_log:
 #tts:
 #  - platform: google_translate
 
-remote_homeassistant:
-  instances:
-
 alarm_control_panel:
   - platform: manual
     name: Home Alarm
