@@ -299,10 +299,6 @@ noctis:
   # Alarm
   alarm-color-armed: 'rgba(247,53,67,1)'
 
-  # Valetudo
-  valetudo-map-floor-color: 'var(--switch-unchecked-color)'
-  valetudo-map-wall-color: 'var(--label-badge-red)'
-
   #
   st-font-size-xl: '24px'
   st-font-size-m: '20px'
